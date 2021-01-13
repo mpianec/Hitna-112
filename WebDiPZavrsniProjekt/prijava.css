@@ -1,0 +1,64 @@
+.labela{
+    float:left;
+    margin-left: 2%;
+    width: 20%;   
+}
+h1 {
+    text-align: center;
+    margin-top: 0%;
+}
+body {
+    background: white;
+    color: black;
+    font-family: "Courier";
+    width: 100%;
+    margin: auto;
+}
+header{ 
+    background-repeat: no-repeat;
+    background-color: cornflowerblue;
+    height: 50px;
+}
+a.razmak{
+    background-color: skyblue;
+    margin-left: 3.5%;
+    text-decoration: none;
+    font-family: "Courier";
+    /*border-style: solid;*/   
+}
+.gumbi{
+    margin: 7px;
+}
+form{
+    text-align: center;
+    display: block;   
+}
+.labela{
+    float:left;
+    text-align: left;
+    margin-left: 35%;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.textbox{
+    float:left;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.registracija{
+    float: top;
+    margin-top: -0%;
+
+}
+.captcha{
+    font-family: Arial, Helvetica, sans-serif;  
+    background: none;  
+}
+table, th, td {
+    border: 1px solid black;
+    width:1000px;
+    background-color: lightblue;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
