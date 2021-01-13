@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dokumentacija</title>
+        <meta charset="utf-8">
+        <link href="prijava.css" rel="stylesheet" type="text/css">
+        <meta name="naslov" content="Dokumentacija">
+        <meta name="autor" content="Matija Pianec">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+
+    </head>
+    <body>
+        <header>
+            <h1>Dokumentacija</h1>
+        </header>
+        <nav style="background-color: skyblue; height: 30px">
+            <a class="razmak" href="index.php">Početna stranica</a>
+            <a class="razmak" href="Prijava.php">Prijava</a>
+            <a class="razmak" href="Registracija.php">Registracija</a>
+            <a class="razmak" href="odjava.php">Odjava</a>
+            <a class="razmak" href="Privatno/korisnici.php">Korisnici</a> 
+            <a class="razmak" href="ustanove.php">Ustanove</a>
+        </nav>  
+        
+        <h2>Opis projektnog zadatka</h2>
+        
+        <section><p>Svrha ovog projektnog zadatka je bila napraviti sustav koji će korisniku omogućiti korisniku prijavu nesreća hitnoj službi</p>
+        <p>Postoje 4 uloge korisnika</p>
+        <ol>
+            <li>Administrator</li>
+            <li>Moderator</li>
+            <li>Registrirani korisnik</li>
+            <li>Neregistrirani korisnik</li>
+        </ol>
+        <p>Administrator može: kreirati ustanove te istima dodijeliti moderatore, definirati pozicijre prikaza oglasa navođenjem stranice, vidi statistiku klikova oglasa, statistiku plaćenih oglasa po iznosima te vidi i top listu korisnika s najviše plaćenih oglasa</p>
+        <p>Moderator može: vidjet popis prijava nesreća, popis gradova i država te kreirati neku uzbunu za neki grad, određuje vrstu oglasa za pozicije za koje je zadužen, vidi popis zahtjeva za oglašavanjem oglasa za njegove pozicije, vidi zahtjeve za blokiranjem oglasa</p>
+        <p>Registrirani korisnik može: poslati zahtjev za blokiranjem oglasa, može kreirati zahtjev za kreiranjem oglasa, vidi popis svojih zahtjeva, vidi statistiku klikova za svoje oglase</p>
+        <p>Neregistrirani korisnik može: može vidjet popis ustanova i nesreća, može prijaviti nesreću, može vidjeti popis država i gradova za koje je kreirana uzbuna, vidi oglase na stranicama, može kliknut na oglas koji ga vodi na web mjesto oglasa, može prevesti stranice</p>
+        </section>
+        
+        <h2>Opis projektnog riješenja</h2>
+        <section>
+        <p>Projektno riješenje sadrži bazu podataka u kojoj se nalaze svi entiteti potrebni za rad sustava. Projekt je napravljen od par HTML dokumenata, većeg dijela PHP datoteka te jedne CSS datoteke, uz par slika. Također, još su u radu bili korišteni JavaScript i AJAX. PHP je bio korišten za rad s bazom podataka i stvaranje stranica, HTML za stranice koje nisu trebale koristiti PHP, a AJAX i JavaScript za automatsko ažuriranje, tj. ispis podataka.</p>
+        <h2>ERA</h2>
+        <figure><img src="Slike/era.png" height="400" width="600" alt="era" style="margin-left: 300px"></figure>
+        </section>
+        
+        <h2>Navigacijski model</h2>
+        <section>
+        <figure><img src="Slike/navigacijski.jpg" height="400" width="600" alt="navigacijski" style="margin-left: 300px"></figure>
+        </section>
+        
+        <h2>Popis i opis skripata</h2>
+        <section>
+        <p>Skripte i stranice koje se pojavljuju kod svih korisnika su sljedeće: </p>
+        <ol>
+            <li>index.php - početna stranica</li>
+            <li>Prijava.php - prijava korisnika</li>
+            <li>Registracija.php - registracija neregistriranog korisnika</li>
+            <li>ustanove.php - popis ustanova te njihovih nesreća</li>
+            <li>oglasi.js - služi za ispis oglasa na stranicama</li>
+            <li>ustanove_js.js - služi za ispis ustanova i nesreća u njima</li>
+        </ol>
+        <p>Skripte koje koristi administrator: </p>
+        <ol>
+            <li>A_odBlokirajKorisnika.php - stranica administratora gdje (od)blokira korisnika, također stranica sadrži linkove na ostale stranice administratora</li>
+            <li>A_pregledDnevnika.php - stranica za pregled dnevnika (loga)</li>
+            <li>A_statistikaKlikova.php - vidi statistiku klikova za oglase</li>
+            <li>A_statistikaOglasa.php - vidi statistiku plaćenih oglasa</li>
+            <li>A_topKorisnici.php - vidi koji su top korisnici </li>
+            <li>moderatorIUstanove.php - stranica za dodjelu moderatora ustanovama, te također kreiranje moderatora i samih ustanova</li>
+            <li>stvaranjePozicije.php - stranica za stvaranje pozicije</li>           
+        </ol>
+        <p>Stranice koje koristi moderator</p>
+        <ol>
+            <li>M_kreirajVrstu.php - kreiranje vrste oglasa</li>
+            <li>M_zahtjeviZaBlok.php - vidi popis zahtjeva za blokiranjem oglasa</li>
+            <li>M_zahtjeviZaOglasima.php - vidi popis zahtjeva za stvaranjem oglasa</li>
+        </ol>
+        <p>Stranice koje koristi registrirani korisnik</p>
+        <ol>
+            <li>R_DajOglas.php - šalje zahtjev za oglasom</li>
+            <li>R_mojiOglasi.php - vidi galeriju svojih oglasa</li>
+            <li>R_statistikaKlikova.php - vidi statistiku klikova za svoje oglase</li>
+            <li>zaBlokiranjeOglasa.php - šalje zahtjev za blokiranjem oglasa</li>
+        </ol>
+        <p>Ostale skripte koje se koriste u radu: </p>
+        <ol>
+            <li>brišiCookie.js - koristi se kod administratora kada želi obrisati kolačić o uvjetima korištenja</li>
+            <li>mpianec_js.js - služi za provjere kod registracije</li>
+            <li>oglasiBlok.js - služi za ispis oglasa koje treba blokirat</li>
+            <li>zahtjevZaOglas.js - služi za kreiranje oglasa</li>
+            <li>AJAXProvjeraKorisnika.php - služi kao potpora mpianec_js.js</li>
+            <li>Dokumentacija.html - ova stranica</li>
+            <li>aktivacija.php - služi kao potpora Registracija.php, koristi se za aktivaciju korisničkog računa</li>
+            <li>baza.class.php - koristi se za spajanje na bazu, uzeta s labosa</li>           
+            <li>dohvatiOglase.php - služi za dohvaćanje oglasa, koristi se u oglasi.js</li>
+            <li>dohvatiPoziciju.php - služi za dohvaćanje pozicije, koristi se u zahtjevZaOglas.js </li>
+            <li>dohvatiUstanove.php - služi za dohvaćanje ustanova, koristi se u ustanove_js.js</li>
+            <li>dohvatiUzbunu.php - služi za dohvaćanje uzbune, koristi se u ustanove_js.js</li>
+            <li>dohvatiVrstuOglasa.php - služi za dohvaćanje vrste oglasa, koristi se u zahtjevZaOglas.js</li>
+            <li>funkcije.php - sadrži 2 funkcije koje se koriste u pomakVremena.php</li>
+            <li>odjava.php - koristi se za odjavu korisnika</li>
+            <li>oglasKlikovi.php - koristi se za povećanje broja klikova u oglasi.js</li>
+            <li>oglasiBlok.php - dohvaća listu aktivnih oglasa koji se mogu blokirat, koristi se u oglasiBlok.js</li>
+            <li>pomakVremena.php - služi za postavljanje pomaka vremena</li>
+            <li>prijava.css - koristi se za sva uređenja unutar ovog projekta</li>
+            <li>updateZahtjevaZaBlokiranje.php - postavlja zahtjev za blokiranjem u tablicu, koristi se u oglasiBlok.js</li>
+            <li>zaboravljenaLozinka.php - stranica za zaboravljenu lozinku</li>
+            <li>o_autoru.html - stranica o autoru ove stranice</li>
+        </ol>
+        </section>
+        
+        <h2>Korištene tehnologije</h2>
+        <section>
+            <p>Za izradu projekta korišteno je sljedeće: </p>
+            <ol>
+                <li>MySQL Workbench 6.3 CE - korišten za izradu modela baze podataka</li>
+                <li>NetBeans IDE 8.2 - korišten za izradu svih skripata i strukture</li>
+                <li>phpmyadmin.barka.foi.hr - poslužitelj koji je korišten za pohranu baze podataka</li>
+            </ol>
+        </section>
+        
+        <h2>Korišteni vanjski izvori</h2>
+        <section>
+            <p>Za pomoć pri izradi projekta korišteni su: </p>
+            <ol>
+                <li>Stackoverflow - korišten u slučaju da nešto nije bilo jasno kako napraviti, a da W3Schools to ne sadrži</li>
+                <li>W3Schools - sadrži brojne primjere koji su bili od velike pomoći pri izradi projekta</li>
+            </ol>
+            <p>Također, pri izradi nekih skripata (oglasi.js i ustanove_js.js,funkcije.php, pomakVremena.php) imao sam pomoć kolega(objašnjeno mi je korištenje AJAX-a i pomaka vremena)</p>
+        </section>
+        <footer>
+            <address>Kontakt: <a href="mailto:mpianec@foi.hr">Matija Pianec</a></address>
+            <p>&copy; 2018 M.Pianec</p>
+        </footer>
+    </body>
+</html>
